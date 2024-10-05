@@ -213,7 +213,7 @@ passport.use(
         if (user) {
           // if user is already there then send the message
           console.error("Email already exists");
-          return cb(null, false, { message: "Email already exists" });
+          return cb(null, user, { message: "Email already exists" });
         }
 
         // Hash the password
